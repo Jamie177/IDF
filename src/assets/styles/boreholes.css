@@ -1,0 +1,132 @@
+/* HERO */
+.borehole-hero {
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+/* Add soft peach glow overlay */
+.borehole-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(245,183,161,0.2), transparent 70%);
+}
+
+/* TEXT */
+.section-title {
+  color: #0b5d2a;
+  font-family: 'Times New Roman', serif;
+  font-weight: 700;
+}
+
+.section-text {
+  max-width: 700px;
+  margin: auto;
+  color: #333;
+}
+
+/* CARD */
+.borehole-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #0b5d2a;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Peach accent line */
+.borehole-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: #f5b7a1;
+  transition: 0.3s;
+}
+
+.borehole-card:hover::before {
+  width: 100%;
+}
+
+.borehole-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 45px rgba(0,0,0,.12);
+}
+
+/* ICON */
+.icon-box {
+  background: rgba(11, 93, 42, 0.1);
+  color: #0b5d2a;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.borehole-card:hover .icon-box {
+  background: #f5b7a1;
+  color: #0b5d2a;
+}
+
+/* BUTTONS */
+.donate-btn {
+  background: linear-gradient(45deg, #0b5d2a, #0f7a3b);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.donate-btn:hover {
+  background: #f5b7a1; /* peach */
+  color: #0b5d2a;
+}
+
+.upload-btn {
+  border: 2px solid white;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 22px;
+}
+
+.upload-btn:hover {
+  background: #f5b7a1;
+  color: #0b5d2a;
+  border-color: #f5b7a1;
+}
+
+.gallery-card {
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.1);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .borehole-hero {
+    height: 80vh; /* taller on mobile */
+  }
+}

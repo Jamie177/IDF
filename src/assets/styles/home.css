@@ -1,0 +1,122 @@
+
+ hero.css
+.hero-slider-section {
+  min-height: calc(100vh - 82px);
+  background: linear-gradient(135deg, #0b5d2a 0%, #0f7a38 100%);
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+}
+.hero-slider-section {
+  min-height: calc(100vh - 82px);
+  
+  display: flex;
+  align-items: center;
+}
+
+.hero-text-content h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-family: 'Times New Roman', serif;
+  color: #d8b08c;
+  margin-bottom: 18px;
+}
+
+.hero-text-content p {
+  font-size: 1.1rem;
+  color: #5b3b2a;
+  max-width: 520px;
+}
+
+.hero-main-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.2);
+}
+
+.hero-slider-wrapper {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-main-image {
+  width: 100%;
+  max-width: 900px;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  animation: fadeSlide 0.7s ease;
+}
+
+.hero-content-overlay {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  text-align: center;
+  z-index: 2;
+  color: white;
+}
+
+.hero-content-overlay h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-family: 'Times New Roman', serif;
+  color: #d8b08c;
+  margin-bottom: 12px;
+  text-shadow: 0 4px 18px rgba(0,0,0,.25);
+}
+
+.hero-content-overlay p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(255,255,255,.9);
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,.18);
+  backdrop-filter: blur(8px);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background: #d4af37;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.left-arrow { left: -28px; }
+.right-arrow { right: -28px; }
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .hero-main-image { height: 380px; }
+  .hero-content-overlay h1 { font-size: 2rem; }
+  .left-arrow { left: 10px; }
+  .right-arrow { right: 10px; }
+}
